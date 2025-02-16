@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2D VR Dancing Simulator", "2D VR Dancing Simulator.csproj", "{44CD2E20-38F1-0C76-548F-60FCC1C9638B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44CD2E20-38F1-0C76-548F-60FCC1C9638B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44CD2E20-38F1-0C76-548F-60FCC1C9638B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44CD2E20-38F1-0C76-548F-60FCC1C9638B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44CD2E20-38F1-0C76-548F-60FCC1C9638B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44FBC999-DFEE-4ED2-BA1C-DB3025E0F5A8}
+	EndGlobalSection
+EndGlobal

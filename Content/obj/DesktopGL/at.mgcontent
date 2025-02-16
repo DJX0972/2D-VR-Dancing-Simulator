@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>c:/Users/DJX/Desktop/2D VR Dancing Simulator/Content/758633005.mp3</SourceFile>
+  <SourceTime>2025-02-16T18:29:32.678023+01:00</SourceTime>
+  <DestFile>c:/Users/DJX/Desktop/2D VR Dancing Simulator/Content/bin/DesktopGL/at.xnb</DestFile>
+  <DestTime>2025-02-16T18:34:29.2419281+01:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2024-08-16T19:05:56+02:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2024-08-16T19:05:56+02:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>c:/Users/DJX/Desktop/2D VR Dancing Simulator/Content/bin/DesktopGL/at.ogg</string>
+  </BuildOutput>
+</PipelineBuildEvent>
