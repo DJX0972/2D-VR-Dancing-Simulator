@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qiwF6wkdC7E=",
+  "dgSpecHash": "ijyklmJOH+I=",
   "success": true,
-  "projectFilePath": "C:\\Users\\DJX\\Desktop\\2D VR Dancing Simulator\\2D VR Dancing Simulator.csproj",
+  "projectFilePath": "c:\\Users\\DJX\\Desktop\\2D VR Dancing Simulator\\2D VR Dancing Simulator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DJX\\.nuget\\packages\\monogame.content.builder.task\\3.8.2.1105\\monogame.content.builder.task.3.8.2.1105.nupkg.sha512",
     "C:\\Users\\DJX\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.2.1105\\monogame.framework.desktopgl.3.8.2.1105.nupkg.sha512",

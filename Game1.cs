@@ -2,8 +2,9 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
-using System.ComponentModel;
 using System.Diagnostics;
+using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace _2D_VR_Dancing_Simulator;
 
@@ -31,6 +32,27 @@ public class Game1 : Game
     bool aPressed;
     bool sPressed;
     bool dPressed;
+    Texture2D empty;
+    Texture2D map_tile;
+    Texture2D up;
+    int time;
+    int[,] map2D = {
+        { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
+        { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
+        { 0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0 },
+        { 0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0 },
+        { 0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0 },
+        { 0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0 },
+        { 0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0 },
+        { 0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0 },
+        { 0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0 },
+        { 0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0 },
+        { 0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0 },
+        { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
+        { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 },
+    };
+    public int turn;
+
 
     public Game1()
     {
@@ -39,7 +61,7 @@ public class Game1 : Game
         IsMouseVisible = true;
         _graphics.IsFullScreen = false;
         _graphics.PreferredBackBufferWidth = 640;
-        _graphics.PreferredBackBufferHeight = 400;
+        _graphics.PreferredBackBufferHeight = 416;
         
     }
 
@@ -47,13 +69,16 @@ public class Game1 : Game
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
         
+        map_tile = Content.Load<Texture2D>("tile-yellow");
+        empty = Content.Load<Texture2D>("empty"); // empty tile 
         player_texture = Content.Load<Texture2D>("player-idle");
+        up = Content.Load<Texture2D>("up");
         // TODO: use this.Content to load your game content here
     }
 
     protected override void Initialize()
     {
-        // TODO: Add your initialization logic here
+
         if(MediaPlayer.State != MediaState.Stopped)
         {
         MediaPlayer.Stop(); // stop current audio playback if playing or paused.
@@ -61,7 +86,7 @@ public class Game1 : Game
         song = Content.Load<Song>("at");
         MediaPlayer.Play(song);
         pos_x = 320;
-        pos_y = 200;
+        pos_y = 224;
         color = Color.White;
         canMove = true;
         iterator = 0;
@@ -178,7 +203,7 @@ public class Game1 : Game
 
         if (isOnBeat)
         {
-            onBeat += 1;
+            onBeat++;
             if (!didMove) 
             {
                 canMove = true;
@@ -193,7 +218,7 @@ public class Game1 : Game
 
         if (!isOnBeat) 
         {
-            offBeat += 1;
+            offBeat++;
             didMove = false;
         }
 
@@ -201,6 +226,7 @@ public class Game1 : Game
         {
             isOnBeat = true;
             offBeat = 0;
+            turn++;
         }
 
 
@@ -211,14 +237,43 @@ public class Game1 : Game
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
+        GraphicsDevice.Clear(Color.Black);
 
         // TODO: Add your drawing code here
-
         _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
-        _spriteBatch.Draw(texture: player_texture, destinationRectangle: new Rectangle(x: pos_x, y: pos_y, width:32, height:32), color: color);
 
+
+        int counter = 0;
+        int columns = map2D.GetLength(1);  // Number of columns
+        Texture2D variable_texture;
+        Rectangle rectangle;
+        int real_row;
+        int real_col;
+
+        foreach (var item in map2D)
+        {
+            int col = counter / columns;
+            int row = counter % columns;
+            real_row = row * 32;
+            real_col = col * 32;
+            rectangle = new Rectangle(real_row, real_col, 32, 32);
+
+            variable_texture = (item == 1) ? map_tile :  empty;
+
+            _spriteBatch.Draw(texture: variable_texture, destinationRectangle: rectangle, color: color);
+            counter++;
+        }
+
+        _spriteBatch.Draw(texture: player_texture, destinationRectangle: new Rectangle(x: pos_x, y: pos_y, width:32, height:32), color: color);
+        
+        if (turn == 9) {
+            time++;
+            if (time <= 11) {
+                _spriteBatch.Draw(texture: up, destinationRectangle: new Rectangle(x: 0, y: -112, width: 640, height: 640), color: color);
+                time = 0;
+            }
+        }
         _spriteBatch.End();
 
         base.Draw(gameTime);

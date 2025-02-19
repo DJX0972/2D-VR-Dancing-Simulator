@@ -27,3 +27,8 @@ c:\Users\DJX\Desktop\2D VR Dancing Simulator\bin\Debug\net8.0\Content\player-idl
 c:\Users\DJX\Desktop\2D VR Dancing Simulator\bin\Debug\net8.0\Content\tile-yellow.xnb
 c:\Users\DJX\Desktop\2D VR Dancing Simulator\bin\Debug\net8.0\Content\at.ogg
 c:\Users\DJX\Desktop\2D VR Dancing Simulator\bin\Debug\net8.0\Content\at.xnb
+c:\Users\DJX\Desktop\2D VR Dancing Simulator\bin\Debug\net8.0\Content\empty.xnb
+c:\Users\DJX\Desktop\2D VR Dancing Simulator\bin\Debug\net8.0\Content\down.xnb
+c:\Users\DJX\Desktop\2D VR Dancing Simulator\bin\Debug\net8.0\Content\left.xnb
+c:\Users\DJX\Desktop\2D VR Dancing Simulator\bin\Debug\net8.0\Content\right.xnb
+c:\Users\DJX\Desktop\2D VR Dancing Simulator\bin\Debug\net8.0\Content\up.xnb

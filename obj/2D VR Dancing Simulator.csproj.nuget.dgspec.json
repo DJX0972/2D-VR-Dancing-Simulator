@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DJX\\Desktop\\2D VR Dancing Simulator\\2D VR Dancing Simulator.csproj": {}
+    "c:\\Users\\DJX\\Desktop\\2D VR Dancing Simulator\\2D VR Dancing Simulator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DJX\\Desktop\\2D VR Dancing Simulator\\2D VR Dancing Simulator.csproj": {
+    "c:\\Users\\DJX\\Desktop\\2D VR Dancing Simulator\\2D VR Dancing Simulator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DJX\\Desktop\\2D VR Dancing Simulator\\2D VR Dancing Simulator.csproj",
+        "projectUniqueName": "c:\\Users\\DJX\\Desktop\\2D VR Dancing Simulator\\2D VR Dancing Simulator.csproj",
         "projectName": "2D VR Dancing Simulator",
-        "projectPath": "C:\\Users\\DJX\\Desktop\\2D VR Dancing Simulator\\2D VR Dancing Simulator.csproj",
+        "projectPath": "c:\\Users\\DJX\\Desktop\\2D VR Dancing Simulator\\2D VR Dancing Simulator.csproj",
         "packagesPath": "C:\\Users\\DJX\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DJX\\Desktop\\2D VR Dancing Simulator\\obj\\",
+        "outputPath": "c:\\Users\\DJX\\Desktop\\2D VR Dancing Simulator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DJX\\AppData\\Roaming\\NuGet\\NuGet.Config"
